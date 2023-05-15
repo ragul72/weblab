@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular JS Animations</title>
+        <style>
+            div {
+              transition: all linear 0.5s;
+              background-color: rgb(199, 37, 37);
+              height: 100px;
+              width: 100%;
+              position: relative;
+              top: 0;
+              left: 0;
+              padding-top: 25px;
+              font-size: 50px;
+              text-align: center;
+            }
+            
+            .ng-hide {
+              height: 0;
+            }
+            
+            .css-class-add, .css-class-remove {
+            transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            }
+
+            .css-class,
+            .css-class-add.css-class-add-active {
+            color: rgb(216, 38, 76);
+            font-size: 5em;
+            }
+
+            .css-class-remove.css-class-remove-active {
+            font-size: 2em;
+            color: black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+        <div ng-hide="myCheck">WELCOME TO SSNCE!!</div>
+        <h1>Show the DIV: <input type="checkbox" ng-model="myCheck2"></h1>
+        <div ng-show="myCheck2">B.E/B.Tech Admissions here!!</div>
+        <p>
+            <button ng-click="myCssVar='css-class'">Set</button>
+            <button ng-click="myCssVar=''">Clear</button>
+            <br>
+            <span ng-class="myCssVar">FOR ADMISSIONS</span>
+        </p>
+        <script>
+            var app = angular.module('myApp', ['ngAnimate']);
+        </script>
+    </body>
+</html>

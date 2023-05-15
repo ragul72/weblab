@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<style>
+
+.container
+{
+  background-color: blanchedalmond;
+  width: 300px;
+  border: 15px red;
+  padding: 50px;
+  margin: 20px;
+}
+p
+{
+    font-size: 1.2em;
+}
+    input[type='text']
+{
+
+  font-size:18px;
+}
+
+input[type='submit']
+{
+  
+    border: none;
+    color: white;
+    background-color: red;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    
+    cursor: pointer;
+}
+input[type='passowrd']
+{
+    border: none;
+    color: white;
+    background-color: blue;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    
+    cursor: pointer;
+
+}
+</style>
+<script src="2a.js"></script>
+</head>
+<body>
+<center>
+<div class = "container">
+<form onsubmit="validate()">
+    <p>Enter your name:
+        <input type="text" id="name-person" placeholder="name"/>
+
+    </p>
+    <p>Enter your phone number:
+    <input type="text"id="phone-number" placeholder="phone number"/> 
+    </p>
+    <p>Enter your email address: 
+        <input type="text" id="e-mail" placeholder="e mail"/>
+
+    </p>
+    <p>
+        Password: <input type="password" placeholder="password">
+    </p>
+    <p>
+        Re-enter Password: <input type="password" placeholder="confirm password">
+    </p>
+   
+    <p>
+    <input type="submit" />
+     </p>
+  </form>
+</div>
+</center>
+</body>
+</html>

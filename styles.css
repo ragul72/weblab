@@ -1,0 +1,97 @@
+html, body{
+ background-color: LightBlue;
+ border: 10px solid power;
+}
+frameset{
+ background-color: LightPink;
+}
+
+ol{
+height : 70px;
+width : 90px;
+border-style:double;
+margin:50px;
+color: purple;
+font-family:bold;
+font-size: 100%;
+}
+ul{
+border-style:outset;
+border-radius:20px;
+margin: 50px;
+color: DeepPink;
+font-family:bold;
+font-size: 100%;
+}
+h1{
+color: Purple;
+font-family:papyrus;
+font-size:200%;
+}
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+table, th, td {
+border: 2px solid;
+width : 50%
+border-collapse: collapse;
+border-color:black;
+}
+.dropdown-menu{
+color:green;
+passing:11px 15px;
+display:block;
+}
+button {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+body {
+
+
+button {
+  position: absolute;
+  left: calc(50% - 3em);
+  top: calc(50% - 2em);
+  
+  height: 4em;
+  width: 7em;
+  
+  background: black;
+  background: linear-gradient(top, #555, #333);
+  border: none;
+  border-top: 3px solid orange;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 1em;
+  transform-origin: 50% 5em;
+}

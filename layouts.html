@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: black;
+                color: #fff;
+                border
+}
+
+.nav-links a {
+color: #fff;
+}
+
+.logo {
+font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+display: flex;
+gap: 1em;
+font-size: 18px;
+}
+
+.menu li:hover {
+background-color: #4c9e9e;
+border-radius: 5px;
+transition: 0.3s ease;
+}
+
+.menu li {
+padding: 5px 14px;
+}
+
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar">
+    <ul class="nav-links">
+    <div class="menu">
+    <li><a href="#!Home">Home</a></li>
+    <li><a href="#!About">About</a></li>
+    <li><a href="#!Services">Services</a></li>
+    </div>
+    <div ng-view></div>
+
+
+</body>
+
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+
+        .when("/Home", {
+            template : "THIS IS THE HOME BUTTON"
+        })
+        .when("/About", {
+            template : "THIS IS THE ABOUT BUTTON"
+        })
+
+        .when("/Services", {
+            template : "THIS IS THE SERVICES BUTTON"
+        });
+
+    });
+    </script>
+
+</html> 
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Menu</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <style>
+    /* CSS styles */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: black;
+    }
+  </style>
+</head>
+<body ng-app="menuApp">
+  <h1>Navigation Menu</h1>
+
+  <div ng-controller="menuController">
+    <ul>
+      <li ng-repeat="menu in menus"><a href="{{ menu.link }}">{{ menu.title }}</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // AngularJS code
+    var app = angular.module("menuApp", []);
+    app.controller("menuController", function($scope) {
+      $scope.menus = [
+        {
+          title: "Home",
+          link: "#home"
+        },
+        {
+          title: "About",
+          link: "#about"
+        },
+        {
+          title: "Services",
+          link: "#services"
+        },
+        {
+          title: "Contact",
+          link: "#contact"
+        }
+      ];
+    });
+  </script>
+</body>
+</html>

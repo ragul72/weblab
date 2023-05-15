@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>    
+    <link rel="stylesheet" href="vstyle.css">
+    <script src="video.js"></script>
+    <title>Video Editor</title>
+</head>
+<body ng-app="videoeditor">
+    <div class="title">
+        <p>Welcome to Angular Video Editor</p>
+    </div>
+    <div class="videosrc" ng-controller="videoCtrl">
+        <video class="videosize" id="myVideo" ng-src="{{videoUrl}}" controls></video>
+        <div class="controls">
+            <button ng-click="restart()"><img src="restart.png" alt=""></button>
+            <button ng-click="minus()"><img src="minus.png" alt=""></button>
+            <button ng-click="play()"><img src="play.png" alt=""></button>
+            <button ng-click="pause()"><img src="pause.png" alt=""></button>
+            <button ng-click="add()"><img src="add.png" alt=""></button>
+            <button ng-click="mute()"><img src="mute.png" alt=""></button>
+        </div>
+    </div>
+</body>
+</html>

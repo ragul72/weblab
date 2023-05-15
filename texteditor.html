@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="tstyle.css">
+    <script src="text.js"></script>
+    <title>Text Editor</title>
+</head>
+
+<body ng-app="texteditor" ng-controller="textCtrl">
+    <div class="title">
+        <p>Welcome to Angular Text Editor</p>
+    </div>
+    <div class="features">
+        <button class="button" ng-click="newFile()">New File</button>
+        <button class="button" ng-click="loadFile()">Load File</button>
+        <button class="button" ng-click="saveFile()">Save File</button>
+        <button class="button" ng-click="cutFile()">Cut</button>
+        <button class="button" ng-click="copyFile()">Copy</button>
+        <button class="button" ng-click="pasteFile()">Paste</button>
+        <button class="button" ng-click="exitFile()">Exit</button>
+    </div>
+    <div class="filename">
+        <form>
+            <div ng-show="newIsVisible">
+                <label for="filename">FILE NAME : </label>
+                <input class="textinput" type="text" ng-model="filename" placeholder="Enter your file name">
+                <br><br>
+                <p style="font-size: 15px;"><em>*When you create a new file the old contents along with the name will be lost. Each time you create a new file, you give it a name and enter the content.</em></p>
+            </div> 
+            <div ng-show="loadIsVisible">
+                <label for="filename">UPLOAD NAME : </label>
+                <input type="file" id="fileInput">
+                <br><br>
+                <p style="font-size: 15px;"><em>*Choose the required file and again click on load file to display the contents of the file in the textarea.</em></p>
+            </div>
+            <br><br>
+            <textarea ng-show="isVisible" id="content" ng-model="content" cols="150" rows="25"></textarea>
+        </form>
+        <p class="exitmessage">{{ message }}</p>
+    </div>
+</body>
+
+</html>

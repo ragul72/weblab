@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Component</title>
+        <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+        <script src="script.js"> </script>
+        <style>
+            body{
+                background-color: darksalmon;
+                color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-app="app">
+            <hello-world name="Sharon"> </hello-world>
+        </div>  
+    </body>
+    <script>
+        angular.module('app', [])
+      .component('helloWorld', {
+        template: '<h1 style="text-align:center">Hello World! This is {{$ctrl.name}}, and I am from {{$ctrl.class}}</h1>',
+        bindings: { name : '@' },
+        controller: function()
+        {
+            this.class = "SSN College of Engineering";
+        }
+      });
+      </script>
+</html>

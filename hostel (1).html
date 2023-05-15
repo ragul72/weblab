@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>WEB PAGE</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <center>
+  <h1>HOSTEL MANAGEMENT SYSTEM</h1>
+ <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Fsearch%3Fwallpaper%3Dhostel&psig=AOvVaw33HFIdLihRTqy4DsqLdxp0&ust=1675846304328000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMji6o6Eg_0CFQAAAAAdAAAAABAE">
+Click this link</a>
+  <img src="hstl.jpg" alt="Hostel"
+   height="400" width="400">
+  
+  </center>
+
+<table>
+<tr>
+<th>outpass</th>
+<th>attendance</th>
+<th>complaints</th>
+<th>laundry</th>
+</tr>
+
+<tr>
+<td>SNO</td>
+<td>P/A</td>
+<td>comp</td>
+<td>laundry</td>
+</tr>
+
+<tr>
+<button class="dropdownbutton">DROPDOWN MENU</button>
+<div class="dropdown-menu">
+<a href="#">Outpass</a><br>
+<a href="#">complaint</a><br>
+<a href="#">Attendance</a><br>
+<a href="#">Laundry</a>
+</div>
+
+<ul>
+  <li>Student registration</li>
+  <li>Room allocation</li>
+  <li>Outpass management</li>
+   <li>Visitor management</li>
+</ul>
+<ol>
+  <li>name</li>
+  <li>block</li>
+  <li>room number</li>
+</ol>
+ <frameset cols = "10%,80%,10%">
+      <frame name = "top" src = "/html/top_frame.htm" />
+      <frame name = "main" src = "/html/main_frame.htm" />
+      <frame name = "bottom" src = "/html/bottom_frame.htm" />
+
+   </frameset>
+
+<img src="host.jpg" alt="register" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="hostel.html">
+</map>
+<audio controls>
+  <source src="file.mp3" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+<h2>Video</h2>
+<video autoplay muted>
+  <source src="world.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+        <h2>SVG</h2>
+        <svg id = "svgelem" height = "200" xmlns = "http://www.w3.org/2000/svg">
+            <circle id = "redcircle" cx = "50" cy = "50" r = "50" fill = "red" />
+        </svg>
+        <h2>GeoLocation</h2>
+        <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Try It</button>
+        <p id="demo"></p>
+
+        <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+
+
+</body>
+<button> Save</button>
+
+</html>

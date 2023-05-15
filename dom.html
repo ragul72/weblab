@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>DOM Manipulation</title>
+       <style>
+        body{
+            background-color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: darkgreen;
+        }
+       </style>
+   </head>
+   <body>
+    <center>
+       <p class="master2">I like RCB</p>
+       <p class="master2">I like Virat Kohli</p>
+       <p class="master2">I hope they win!</p>
+       <h1 class="master2">Cricket</h1>
+       <button id="btn">click me</button>
+    </center>
+       <script>
+           const btn = document.getElementById('btn')
+           btn.addEventListener('click', function master(){
+              var master = document.getElementsByClassName("master2");
+               master[2].innerHTML = 'I like watching the match at the stadium';
+               master[3].innerHTML = 'BARMY ARMY';
+           })
+       </script>
+   </body>
+</html>
+
